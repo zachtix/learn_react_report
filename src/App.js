@@ -1,5 +1,6 @@
 import Transaction from "./components/Transaction";
 import './App.css'
+import FormComponent from "./components/FormComponent";
 
 const design = {color:'red',textAlign:'center'}
 
@@ -10,6 +11,7 @@ function App() {
     <div className="container">
       <Title/>
       <Desc/>
+      <FormComponent/>
       <Transaction/>
     </div>
   );

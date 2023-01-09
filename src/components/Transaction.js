@@ -1,12 +1,13 @@
 import Item from "./Item"
 import './Transaction.css'
+import {v4 as uuidv4} from 'uuid'
 
 const Transaction =  ()=>{
   const data = [
-    {id:1,title:'Hospital',cost:'2000'},
-    {id:2,title:'Salary',cost:'50000'},
-    {id:3,title:'Travel',cost:'500'},
-    {id:4,title:'Shoping',cost:'5000'},
+    {title:'Hospital',cost:2000},
+    {title:'Salary',cost:50000},
+    {title:'Travel',cost:500},
+    {title:'Shoping',cost:5000},
   ]
   return (
     <ul className="item-list">
@@ -20,7 +21,7 @@ const Transaction =  ()=>{
       {/* <Item title={data[0].title} cost={data[0].cost}/> */}
       {data.map((e)=>{
         // return <Item title={e.title} cost={e.cost}/>
-        return <Item {...e} key={e.id}/>
+        return <Item {...e} key={uuidv4()}/>
       })}
     </ul>
   )
