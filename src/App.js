@@ -2,6 +2,8 @@ import Transaction from "./components/Transaction";
 import './App.css'
 import FormComponent from "./components/FormComponent";
 import { useState } from 'react'
+import DataContext from "./data/DataContext";
+import ReportComponent from "./components/ReportComponent";
 
 function App() {
 
@@ -18,12 +20,15 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <Title/>
-      <Desc/>
-      <FormComponent onAddItem={onAddNewItem}/>
-      <Transaction items= {items}/>
-    </div>
+    <DataContext.Provider value={'ก้องรักสยาม'}>
+      <div className="container">
+        <Title/>
+        <ReportComponent/>
+        <Desc/>
+        <FormComponent onAddItem={onAddNewItem}/>
+        <Transaction items= {items}/>
+      </div>
+    </DataContext.Provider>
   );
 }
 
