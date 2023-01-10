@@ -1,9 +1,12 @@
 import PropTypes from 'prop-types'
+import './Item.css'
 
 const Item = (props)=>{
   const {title,cost} = props
+  const status = cost<0 ? 'expense':'income'
+  const symbol = cost<0 ? '-':'+'
   return(
-    <li className='Item'>{title} <span> {cost}</span></li>
+    <li className={status}>{title} {status} <span> {symbol} {Math.abs(cost)}</span></li>
   )
 }
 
