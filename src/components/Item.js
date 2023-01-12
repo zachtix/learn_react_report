@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import './Item.css'
-import DataContext from '../data/DataContext'
+// import DataContext from '../data/DataContext'
 
 const Item = (props)=>{
   const {title,cost} = props
@@ -8,9 +8,9 @@ const Item = (props)=>{
   const symbol = cost<0 ? '-':'+'
   return(
     <li className={status}>{title} <span> {symbol} {Math.abs(cost)}</span>
-      <DataContext.Consumer>
+      {/* <DataContext.Consumer>
       {value=><p>{value}</p>}
-    </DataContext.Consumer>
+    </DataContext.Consumer> */}
     </li> // Math.abs rm symbol + - in Number
   )
 }

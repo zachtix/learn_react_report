@@ -1,18 +1,17 @@
 import Item from "./Item"
 import './Transaction.css'
-import DataContext from "../data/DataContext"
-import { useContext } from "react"
 // import {v4 as uuidv4} from 'uuid'
 
 const Transaction =  (props)=>{
   const {items} = props
-  const name = useContext(DataContext)
+  // const name = useContext(DataContext)
   // const data = [
   //   {title:'Hospital',cost:2000},
   //   {title:'Salary',cost:50000},
   //   {title:'Travel',cost:500},
   //   {title:'Shoping',cost:5000},
   // ]
+  // const {income, expense} = useContext(DataContext)
   return (
     <div>
       <ul className="item-list">
@@ -29,10 +28,12 @@ const Transaction =  (props)=>{
           return <Item {...e} key={e.id}/>
         })}
       </ul>
+      {/* <p>รายรับ : {income}</p>
+      <p>รายจ่าย : {expense}</p> */}
       {/* <DataContext.Consumer>
         {value=><p>{value}</p>}
       </DataContext.Consumer> */}
-      {name}
+      {/* {name} */}
     </div>
   )
 }
