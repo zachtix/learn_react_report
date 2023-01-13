@@ -16,10 +16,10 @@ function App() {
 
   const design = {color:'red',textAlign:'center'}
   
-  const Title = ()=><h2 style={design}>แอพบัญชีรายรับ - รายจ่าย</h2>
-  const Desc = ()=><p>บันทึกรายรับ รายจ่าย</p>
+  const Title = ()=><h1 style={design}>บัญชีรายรับ - รายจ่าย</h1>
+  // const Desc = ()=><p>บันทึกรายรับ รายจ่าย</p>
   
-  const [items,setItems] = useState([])
+  const [items,setItems] = useState(initState)
 
   const [reportIncome, setReportIncome] = useState(0)
   const [reportExpense, serReportExpense] = useState(0)
@@ -50,7 +50,7 @@ function App() {
       <div className="container">
         <Title/>
         <ReportComponent/>
-        <Desc/>
+        {/* <Desc/> */}
         <FormComponent onAddItem={onAddNewItem}/>
         <Transaction items= {items}/>
       </div>

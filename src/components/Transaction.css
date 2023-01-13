@@ -23,5 +23,6 @@
 }
 
 .item-list li:hover{
-  background: #dddddd;
+  background: #dddddd ;
+  transition: 0.5s;
 }

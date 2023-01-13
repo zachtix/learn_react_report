@@ -7,7 +7,7 @@ const Item = (props)=>{
   const status = cost<0 ? 'expense':'income'
   const symbol = cost<0 ? '-':'+'
   return(
-    <li className={status}>{title} <span> {symbol} {Math.abs(cost)}</span>
+    <li className={status}>{title} <span> {symbol} {Math.abs(cost).toLocaleString()}</span>
       {/* <DataContext.Consumer>
       {value=><p>{value}</p>}
     </DataContext.Consumer> */}
